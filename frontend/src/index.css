@@ -1,72 +1,156 @@
-
 *,
 ::before,
-::after{
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-label{
-  font-size: 20px;
-}
-
 html,
-body{
+body {
   height: 100%;
   width: 100%;
-}
-
-body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container{
-  background-color: #FFF;
-  padding: 32px 48px;
-  border-radius: 10px;
+label {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 36px 40px;
+  border-radius: 16px;
   width: 100%;
-  max-width: 400px;
-  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  max-width: 420px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
 }
 
-.container > h1{
-  margin-bottom: 20px;
+.container:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
 }
 
-.container > form{
+.container > h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  text-align: center;
+  color: #111827;
+}
+
+.container > form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
 }
-.container div{
+
+.container div {
   display: flex;
   flex-direction: column;
 }
 
-.container input{
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
+.container input {
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
   outline: none;
-  border-bottom: 1px solid black;
 }
 
-.container input::placeholder{
-  font-size: 12px;
+.container input::placeholder {
+  font-size: 13px;
   font-style: italic;
+  color: #9ca3af;
 }
 
-button{
-  background-color: purple;
+button {
+  background-color: #6366f1;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
   color: white;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px;
   cursor: pointer;
-  margin: 10px 0;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f46e5;
+}
+
+.user-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.expense-list {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  margin-bottom: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.expense-item:hover {
+  background-color: #f3f4f6;
+}
+
+.expense-description {
+  font-weight: 600;
+  color: #374151;
+}
+
+.delete-button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+.amounts-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.income-amount {
+  color: #10b981;
+}
+
+.expense-amount {
+  color: #ef4444;
 }
